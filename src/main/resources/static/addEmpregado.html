@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="addEmpregado.js"></script>
+</head>
+<body>
+   <header> 
+      <h1> Adicionar empregado </h1>
+   </header>
+   <main >
+       <p> Nome: 
+           <input type="text" id="nome">
+       </p>
+       <p> Salário: 
+           <input type="number" id="salario">
+       </p>
+       <p> Receita: 
+            <input type="number" id="receita">
+        </p>
+    
+       <input type="button" value="Adicionar" onclick="adicionar()">
+       <p id="resultado"></p>
+   </main>
+</body>
+</html>
