@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +32,15 @@ public class CusteaveisController {
         return CusteaveisRepository.getCusteaveis();
     }
    
+
+    @GetMapping(path = "/lucro/maior/{lucro}", produces= MediaType.APPLICATION_JSON_VALUE)
+    public ArrayList<Custeavel> getLucroMaior(@PathVariable double lucro) {
+        logger.info("Enviar todos os custeáveis");
+        
+        return CusteaveisRepository.getCusteaveis();
+    }
+
+
     @GetMapping(path = "prejuizo", produces= MediaType.APPLICATION_JSON_VALUE)
     public ArrayList<Custeavel> getPrejuizos() {
         logger.info("Enviar custeáveis com lucro negativo ");
